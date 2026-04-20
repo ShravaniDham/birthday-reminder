@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: birthday-reminder-api
+    runtime: docker
+    repo: https://github.com/ShravaniDham/birthday-reminder
+    branch: main
+    plan: free
+    envVars:
+      - key: DB_URL
+        value: jdbc:mysql://your-mysql-host:3306/birthday_db_final
+      - key: root
+        value: your_db_username
+      - key: Shrav2005
+        value: Shrav2005
+      - key: SPRING_PROFILES_ACTIVE
+        value: production
